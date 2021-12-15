@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>xcode 24 h</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        #header{
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            position: fixed;
+            z-index: 1000;
+        }
+        .header{
+            width: 85%;
+            height: 60px;
+            background-color:black;
+            margin: auto;
+            display: flex;
+        }
+        .logo{
+            flex-basis: 25%;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            font-size: 25px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+        }
+        .logo span{
+            color: red;
+            font-weight: 600;
+        }
+        nav{
+            flex-basis: 75%;
+        }
+        nav ul {
+            text-align: center;
+            list-style: none;
+        }
+        nav ul li {
+            display:inline-block;
+            width: 120px;
+            height: 60px;
+            line-height: 60px;
+            
+        }
+        .item-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            text-transform: uppercase;
+            display: block;
+        }
+        .menu-sub{
+            
+            width: 100%;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+            visibility: hidden ;
+            transition:  .5s ;
+        }
+        .menu-sub .row{
+            width: 85%;
+            margin: 30px auto 0;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li:hover > .menu-sub{
+            top: 60px;
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu-item{
+            width: 30%;
+            background-color: black;
+        }
+        .drop-up{
+            width:15px;
+            height: 15px;
+            background-color: black;
+            transform: rotate(45deg);
+            position: absolute;
+            top:22px;
+            left:570px;
+
+        }
+    </style>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="logo"><span>X</span>-<span>C</span>ODE</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="item-link">trang chủ</a>
+                        <div class="menu-sub">
+                            <div class="drop-up"></div>
+                            <div class="row">
+                                <div class="menu-item">
+                                    <ul>
+                                        <li><a href="#">item</a></li>
+                                        <li><a href="#">item</a></li>
+                                        <li><a href="#">item</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-item">
+                                    <ul>
+                                        <li><a href="#">item1</a></li>
+                                        <li><a href="#">item1</a></li>
+                                        <li><a href="#">item1</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-item">
+                                    <ul>
+                                        <li><a href="#">item2</a></li>
+                                        <li><a href="#">item2</a></li>
+                                        <li><a href="#">item2</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="item-link">giới thiệu</a></li>
+                    <li><a href="#" class="item-link">blog</a></li>
+                    <li><a href="#" class="item-link">tin tức</a></li>
+                    <li><a href="#" class="item-link">liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>
